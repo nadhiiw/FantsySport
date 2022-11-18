@@ -1,10 +1,10 @@
-package com.project.FantasySport.model;
+package com.project.FantasySport.players;
 
 import java.time.LocalDate;
 import java.util.UUID;
 
 public class Fantasy {
-    private UUID id;
+    private  UUID id;
     private String name;
     private String position;
     private String team;

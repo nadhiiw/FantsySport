@@ -1,5 +1,7 @@
 package com.project.FantasySport.players;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -15,7 +17,7 @@ public class Player {
 
 
     //constructor with the object
-    public Player(UUID id, String name, String position, String team, LocalDate dob) {
+    public Player(@JsonProperty("id") UUID id,@JsonProperty("name") String name,@JsonProperty("position") String position,@JsonProperty("team") String team,@JsonProperty("dob") LocalDate dob) {
         this.id = id;
         this.name = name;
         this.position = position;

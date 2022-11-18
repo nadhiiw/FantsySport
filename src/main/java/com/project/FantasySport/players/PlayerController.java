@@ -1,5 +1,6 @@
 package com.project.FantasySport.players;
 
+import jdk.dynalink.linker.LinkerServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,22 +10,22 @@ import java.util.List;
 @RequestMapping(path = "api/v1/players")
 public class PlayerController {
 
-    private PlayerRepository playerRepository;
+    private PlayerService playerService;
 
     @Autowired
-    public PlayerController(PlayerRepository playerRepository) {
-        this.playerRepository = playerRepository;
-    }
-
-    @GetMapping
-    public List<Player> getPlayer(){
-        return playerRepository.getPlayer();
+    public PlayerController(PlayerService playerService) {
+        this.playerService = playerService;
     }
 
     @PostMapping
+    public int getPlayer(@RequestBody Player player){
+        return playerService.addPlayer(player);
+    }
 
-
-    @DeleteMapping
+    @GetMapping
+    public List<Player> getAllPlayer(){
+        return playerService.getAllPlayer();
+    }
 
 
 }

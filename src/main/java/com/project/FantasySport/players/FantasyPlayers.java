@@ -1,6 +1,6 @@
 package com.project.FantasySport.players;
 
-import java.util.UUID;
+import java.util.*;
 
 public interface FantasyPlayers {
     int startPLayer(UUID id, Player player);
@@ -9,4 +9,8 @@ public interface FantasyPlayers {
         UUID id = UUID.randomUUID();
         return startPLayer(id, player);
     }
+
+    List<Player> selectAllPlayers();
+
+
 }

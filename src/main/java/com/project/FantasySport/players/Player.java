@@ -3,19 +3,19 @@ package com.project.FantasySport.players;
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class Fantasy {
+public class Player {
     private  UUID id;
     private String name;
     private String position;
     private String team;
     private LocalDate dob;
 
-    public Fantasy() {
+    public Player() {
     }
 
 
     //constructor with the object
-    public Fantasy(UUID id, String name, String position, String team, LocalDate dob) {
+    public Player(UUID id, String name, String position, String team, LocalDate dob) {
         this.id = id;
         this.name = name;
         this.position = position;
@@ -24,7 +24,7 @@ public class Fantasy {
     }
 
     //constructor without the id
-    public Fantasy(String name, String position, String team, LocalDate dob) {
+    public Player(String name, String position, String team, LocalDate dob) {
         this.name = name;
         this.position = position;
         this.team = team;

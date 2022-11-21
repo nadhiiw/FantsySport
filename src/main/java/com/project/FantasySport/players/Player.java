@@ -2,11 +2,13 @@ package com.project.FantasySport.players;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
 import java.time.LocalDate;
 import java.util.UUID;
 
 public class Player {
     private  UUID id;
+
     private String name;
     private String position;
     private String team;

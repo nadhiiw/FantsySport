@@ -12,5 +12,11 @@ public interface FantasyPlayers {
 
     List<Player> selectAllPlayers();
 
+    Optional<Player> selectPlayerById(UUID id);
+
+    int deletePlayerById(UUID id);
+
+    int updatePlayerById(UUID id, Player player);
+
 
 }

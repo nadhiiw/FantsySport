@@ -14,8 +14,9 @@ public class PlayerRepository implements FantasyPlayers {
 
     private static List<Player> players = new ArrayList<>();
 
+
     @Override
-    public int startPLayer(UUID id, Player player) {
+    public int addNewPLayer(UUID id, Player player) {
         players.add(new Player(id, player.getName(), player.getPosition(), player.getTeam(),player.getDob()));
         return 1;
     }

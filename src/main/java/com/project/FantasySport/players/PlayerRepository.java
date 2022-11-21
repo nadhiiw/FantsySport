@@ -41,11 +41,12 @@ public class PlayerRepository implements FantasyPlayers {
     }
 
     @Override
-    public int updatePlayerById(UUID id, Player player) {
+    public int updatePlayerById(UUID id, Player updatePlayer) {
         return selectPlayerById(id).map(player1 -> {
-            int indexOfPlayer = players.indexOf(player);
-            if(indexOfPlayer >= 0) {
-                players.set(indexOfPlayer,player);
+            int indexOfPlayerToUpdate = players.indexOf(player1);
+            if(indexOfPlayerToUpdate >= 0) {
+                players.set(indexOfPlayerToUpdate,new Player(id,updatePlayer.getName(),updatePlayer.getPosition(),updatePlayer.getTeam(),updatePlayer.getDob()));
+                return 1;
             }
             return 0;
         })
